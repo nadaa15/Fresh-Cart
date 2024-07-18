@@ -28,7 +28,7 @@ import Loading from './Components/Loading/Loading';
 
 let router = createBrowserRouter([
   {
-    path: "",
+    path: "/Fresh-Cart/",
     element: <Layout />,
     children: [
       {
@@ -136,6 +136,7 @@ function App() {
       <WishListContextProvider>
         <CartContextProvider>
           <UserContextProvider>
+
             <RouterProvider router={router}></RouterProvider>
             <Toaster />
           </UserContextProvider>
