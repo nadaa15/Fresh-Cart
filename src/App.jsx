@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import './App.css'
-import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
 import Products from './Components/Products/Products';
@@ -133,15 +133,10 @@ function App() {
 
   return (
     <>
-      {" "}
       <WishListContextProvider>
         <CartContextProvider>
           <UserContextProvider>
-            <BrowserRouter
-              basename="/Fresh-Cart"
-              router={router}
-            ></BrowserRouter>
-
+            <RouterProvider router={router}></RouterProvider>
             <Toaster />
           </UserContextProvider>
         </CartContextProvider>
