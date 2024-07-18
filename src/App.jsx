@@ -133,16 +133,17 @@ function App() {
 
   return (
     <>
-      <WishListContextProvider>
-        <CartContextProvider>
-          <UserContextProvider>
-            <BrowserRouter basename='/Fresh-Cart'>
+      {" "}
+      <BrowserRouter basename="/Fresh-Cart">
+        <WishListContextProvider>
+          <CartContextProvider>
+            <UserContextProvider>
               <RouterProvider router={router}></RouterProvider>
-            </BrowserRouter>
-            <Toaster />
-          </UserContextProvider>
-        </CartContextProvider>
-      </WishListContextProvider>
+              <Toaster />
+            </UserContextProvider>
+          </CartContextProvider>
+        </WishListContextProvider>
+      </BrowserRouter>
     </>
   );
 }
