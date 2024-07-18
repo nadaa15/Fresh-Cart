@@ -28,7 +28,7 @@ import Loading from './Components/Loading/Loading';
 
 let router = createBrowserRouter([
   {
-    path: "/Fresh-Cart/",
+    path: "",
     element: <Layout />,
     children: [
       {
