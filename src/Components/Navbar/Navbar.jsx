@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-6">
           <div>
             <NavLink className="flex items-center justify-center gap-3" to="">
-              <i className="fa-solid fa-star-of-life fa-xl text-main animate-[spinner_3s_ease-in-out_infinite] "></i>
+              <i className="fa-solid fa-star-of-life fa-xl text-main animate-[spinner_3s_ease-in-out_infinite]"></i>
               <span className="self-center text-2xl font-bold whitespace-nowrap dark:text-white">
                 Freshcart
               </span>
@@ -37,20 +37,22 @@ export default function Navbar() {
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <div className="flex flex-wrap justify-center items-center gap-10">
               <NavLink to="cart">
-                {userLogin!==null?<i className="relative fa-solid fa-cart-shopping fa-lg text-zinc-700 hover:text-main transition-all duration-300 cursor-pointer">
-                  <div className="absolute bg-main w-4 h-4 -top-5 -right-2 text-white flex justify-center items-center text-[10px] rounded-full">
-                    {cartItems === null ? (
-                      <i className="fa-solid fa-spinner fa-spin"></i>
-                    ) : (
-                      cartItems.numOfCartItems || 0
-                    )}
-                  </div>
-                </i>:null}
+                {userLogin !== null ? (
+                  <i className="relative fa-solid fa-cart-shopping fa-lg text-zinc-700 hover:text-main transition-all duration-300 cursor-pointer">
+                    <div className="absolute bg-main w-4 h-4 -top-5 -right-2 text-white flex justify-center items-center text-[10px] rounded-full">
+                      {cartItems === null ? (
+                        <i className="fa-solid fa-spinner fa-spin"></i>
+                      ) : (
+                        cartItems.numOfCartItems || 0
+                      )}
+                    </div>
+                  </i>
+                ) : null}
               </NavLink>
               <div className="flex flex-wrap justify-center items-center gap-5">
                 <div className="relative group">
                   <i className="fa-regular fa-user fa-lg text-zinc-700 hover:text-main transition-all duration-300 cursor-pointer">
-                    <i className="fa-solid fa-angle-down fa-xs absolute bottom-1/3 right-5 "></i>
+                    <i className="fa-solid fa-angle-down fa-xs absolute bottom-1/3 right-5"></i>
                   </i>
                   <div className="absolute -bottom-32 -left-16 p-4 font-medium border border-gray-100 rounded-lg bg-gray-50 opacity-0 group-hover:opacity-100 group-hover:-bottom-28 transition-all duration-300">
                     <ul>
@@ -85,6 +87,10 @@ export default function Navbar() {
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-sticky"
               aria-expanded="false"
+              onClick={() => {
+                const menu = document.getElementById("navbar-sticky");
+                menu.classList.toggle("hidden" );
+              }}
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -105,7 +111,7 @@ export default function Navbar() {
             </button>
           </div>
           <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1  "
+            className="items-center justify-between hidden w-full text-center md:flex md:w-auto md:order-1"
             id="navbar-sticky"
           >
             {userLogin !== null ? (
