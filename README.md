@@ -1,8 +1,26 @@
-# React + Vite
+# FreshCart
+FreshCart is an eCommerce application built using React, Tailwind CSS. It provides a user-friendly interface for browsing products, adding items to the cart, and checking out.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features:
+- User authentication (login and signup)
+- Display products, categories and brands
+- Product details
+- Shopping cart and wishlist functionality
+- Checkout process
+- Online payment
+- Responsive design with Tailwind CSS
 
-Currently, two official plugins are available:
+## Dependencies:
+- React
+- React Router
+- TailwindCss
+- Context API
+- Formik
+- Yup
+- Axios
+- jwt-decode
+- React-hot-toast
+- React-slick
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### For live demo please click the link below:
+<https://github.com/nadaa15/Fresh-Cart>
