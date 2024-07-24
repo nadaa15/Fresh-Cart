@@ -43,12 +43,10 @@ const [isLoading, setIsLoading] = useState(false)
           localStorage.setItem("userToken", apiResponse.data.token);
           setUserLogin(apiResponse.data.token);
           navigate("/");
-          console.log(apiResponse);
         })
       .catch((apiResponse) => {
         setIsLoading(false);
         toast.error(apiResponse?.response?.data?.message)
-        console.log(apiResponse);
       });
     
   }

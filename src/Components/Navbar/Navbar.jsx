@@ -89,7 +89,7 @@ export default function Navbar() {
               aria-expanded="false"
               onClick={() => {
                 const menu = document.getElementById("navbar-sticky");
-                menu.classList.toggle("hidden" );
+                menu.classList.toggle("hidden");
               }}
             >
               <span className="sr-only">Open main menu</span>
@@ -187,6 +187,18 @@ export default function Navbar() {
                     }}
                   >
                     Wishlist
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/allorders"
+                    className={({ isActive }) => {
+                      return `relative before:bg-main before:h-[2px] before:absolute before:left-0 before:-bottom-1 hover:before:w-full before:transition-all duration-300 cursor-pointer ${
+                        isActive ? `before:w-full` : "before:w-0"
+                      }`;
+                    }}
+                  >
+                    All orders
                   </NavLink>
                 </li>
               </ul>
