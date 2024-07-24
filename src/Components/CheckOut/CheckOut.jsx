@@ -37,7 +37,7 @@ export default function CheckOut() {
   function handleOnlineOrder(formValues) {
     axios
       .post(
-        `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartItems?.data?._id}?url=https://nadaa15.github.io/Fresh-Cart/`,
+        `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartItems?.data?._id}?url=https://nadaa15.github.io/Fresh-Cart/#`,
         { formValues },
         { headers }
       )
