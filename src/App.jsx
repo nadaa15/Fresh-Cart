@@ -1,6 +1,5 @@
-import { useContext, useState } from 'react'
 import './App.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createHashRouter } from 'react-router-dom'
 import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
 import Products from './Components/Products/Products';
@@ -24,9 +23,8 @@ import BrandProducts from './Components/BrandProducts/BrandProducts';
 import CategoryProducts from './Components/CategoryProducts/CategoryProducts';
 import WishList from './Components/WishList/WishList';
 import WishListContextProvider from '../Context/WishlistContext';
-import Loading from './Components/Loading/Loading';
 
-let router = createBrowserRouter([
+let router = createHashRouter([
   {
     path: "",
     element: <Layout />,
