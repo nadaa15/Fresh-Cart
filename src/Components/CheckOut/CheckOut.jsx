@@ -4,6 +4,7 @@ import { CartContext } from "../../../Context/CartContext";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function CheckOut() {
   const [orderType, setOrderType] = useState("");
@@ -72,6 +73,13 @@ export default function CheckOut() {
   });
   return (
     <>
+      <Helmet>
+        <title>Checkout - Fresh-Cart</title>
+        <meta
+          name="description"
+          content="Securely complete your purchase at checkout. Review your order and provide payment and shipping details."
+        />
+        </Helmet>
       <div className="bg-gray-200 text-center text-xl font-bold w-full mt-20 overflow-hidden bg-opacity-50 h-52 relative">
         <ul className="container flex justify-between absolute">
           <li className="w-16 h-16 bg-main bg-opacity-20 animate-[floating_10s_1s_ease_infinite] rounded -translate-y-[180px]"></li>

@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import {UserContext} from "../../../Context/UserContext";
+import { Helmet } from "react-helmet";
 
 
 export default function Login() {
@@ -52,6 +53,13 @@ export default function Login() {
 
   return (
     <>
+      <Helmet>
+        <title>Login - Fresh-Cart</title>
+        <meta
+          name="description"
+          content="Access your Fresh-Cart account to manage orders, track your wishlist, and enjoy a personalized shopping experience."
+        />
+      </Helmet>
       <form
         onSubmit={formik.handleSubmit}
         className="mt-24 max-w-md mx-auto bg-white py-12 px-6 shadow-xl rounded-lg"
@@ -129,8 +137,8 @@ export default function Login() {
             </span>
           </p>
           <span className="text-main font-bold mt-4">
-              <Link to="/forgotpassword">Forgot Password?</Link>
-            </span>
+            <Link to="/forgotpassword">Forgot Password?</Link>
+          </span>
         </div>
       </form>
     </>

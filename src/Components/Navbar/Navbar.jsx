@@ -54,7 +54,7 @@ export default function Navbar() {
                   <i className="fa-regular fa-user fa-lg text-zinc-700 hover:text-main transition-all duration-300 cursor-pointer">
                     <i className="fa-solid fa-angle-down fa-xs absolute bottom-1/3 right-5"></i>
                   </i>
-                  <div className="absolute -bottom-32 -left-16 p-4 font-medium border border-gray-100 rounded-lg bg-gray-50 opacity-0 group-hover:opacity-100 group-hover:-bottom-28 transition-all duration-300">
+                  <div className="absolute -bottom-28 -left-16 p-4 font-medium border border-gray-100 rounded-lg bg-gray-50 hidden group-hover:inline-block transition-all duration-300">
                     <ul>
                       <li>
                         <NavLink

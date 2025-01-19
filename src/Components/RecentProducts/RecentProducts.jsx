@@ -19,7 +19,8 @@ function getProducts() {
       
       setRecentProducts(data.data)
     })
-    .catch((error) => {});
+    .catch((error) => {console.log(error);
+    });
 }
     useEffect(() => {
       getProducts()
@@ -30,7 +31,7 @@ function getProducts() {
       {recentProducts.length !== 0 ?  (
         <div className="flex flex-wrap justify-center items-center">
           {recentProducts.map((product) => (
-            <div className="card w-full sm:w-1/2 md:w-1/4 lg:w-1/5 p-4 cursor-pointer">
+            <div key={product.id} className="card w-full sm:w-1/2 md:w-1/4 lg:w-1/5 p-4 cursor-pointer">
               <div className="card-img relative group">
                 <img
                   className="w-full object-cover"

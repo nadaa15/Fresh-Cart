@@ -48,9 +48,9 @@ export default function CategorySlider() {
       .get("https://ecommerce.routemisr.com/api/v1/categories")
       .then(({ data }) => {
         setCategories(data.data);
-        console.log(categories);
       })
-      .catch((error) => {});
+      .catch((error) => {console.log(error);
+      });
   }
     useEffect(() => {
 getGategories()
@@ -61,7 +61,7 @@ getGategories()
       {categories?<><h2 className="text-main font-bold text-lg mb-4">Shop popular categories</h2>
       <Slider {...settings}>
         {categories?.map((category) => (
-          <div className='mb-8'>
+          <div key={category.id} className='mb-8'>
             <img
               className="w-full h-[250px] object-cover"
               src={category?.image}

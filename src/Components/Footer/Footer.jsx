@@ -38,7 +38,7 @@ export default function Footer() {
                 <p className="text-lg font-bold mt-4 ">
                   Email:{" "}
                   <span className="text-gray-500 font-semibold text-base">
-                    voxo@Gmail.Com
+                    Fresh-Cart@Gmail.Com
                   </span>
                 </p>
               </div>
@@ -70,7 +70,7 @@ export default function Footer() {
               <img src={img4} />
             </div>
             <div>
-              <p>© 2022, Voxo Theme. Made with heart by Pixelstrap</p>
+              <p>© 2022, Fresh-Cart Theme. Made with heart by Pixelstrap</p>
             </div>
           </div>
         </div>

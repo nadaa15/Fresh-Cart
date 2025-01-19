@@ -26,7 +26,6 @@ export default function CartContextProvider(props) {
       .get(`https://ecommerce.routemisr.com/api/v1/cart`, { headers })
       .then((response) => {
         setcartItems(response.data);
-        console.log(response.data);
         })
       .catch((err) => {
         if (err.response.data.message.includes("No cart")) {

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../../Context/CartContext";
 import toast from "react-hot-toast";
 import Loading from "../Loading/Loading";
+import { Helmet } from "react-helmet";
 
 export default function Brands() {
   const [brands, setBrands] = useState([]);
@@ -25,6 +26,17 @@ export default function Brands() {
 
   return (
     <>
+      <Helmet>
+        <title>Our brands - Fresh-Cart</title>
+        <meta
+          name="description"
+          content="Explore our wide range of brands available for purchase."
+        />
+        <meta
+          name="keywords"
+          content="products, ecommerce, shop, buy, online shopping"
+        />
+      </Helmet>
       {brands.length === 0 ? (
         <Loading />
       ) : (

@@ -6,7 +6,6 @@
 .container{
     @apply  max-w-[90%] mx-auto mt-24;
 }
-
 }
 
 .loader {

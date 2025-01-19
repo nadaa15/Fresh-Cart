@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { UserContext } from '../../../Context/UserContext';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -67,11 +68,18 @@ const [isLoading, setIsLoading] = useState(false)
     
   return (
     <>
+      <Helmet>
+        <title>Create an Account - Fresh-Cart</title>
+        <meta
+          name="description"
+          content="Sign up for an Fresh-Cart account to enjoy a personalized shopping experience, faster checkout, and deals."
+        />
+      </Helmet>
       <form
         onSubmit={formik.handleSubmit}
         className="mt-24 max-w-md mx-auto bg-white py-12 px-6 shadow-xl rounded-lg"
       >
-        <div className='relative before:absolute before:w-1 before:h-6 before:top-[10px] before:-left-6 before:bg-main'>
+        <div className="relative before:absolute before:w-1 before:h-6 before:top-[10px] before:-left-6 before:bg-main">
           <h2 className="text-main text-3xl font-bold mb-8">Register</h2>
         </div>
         <div className="relative mb-8">

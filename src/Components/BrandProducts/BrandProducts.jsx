@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { CartContext } from '../../../Context/CartContext';
 import { WishListContext } from '../../../Context/WishlistContext';
 import Loading from '../Loading/Loading';
+import { Helmet } from 'react-helmet';
 
 export default function BrandProducts() {
   const [products, setProducts] = useState(null);
@@ -35,6 +36,13 @@ export default function BrandProducts() {
     
   return (
     <>
+      <Helmet>
+        <title>{`${name} - Shop by Brand`}</title>
+        <meta
+          name="description"
+          content={`Explore the latest products in the ${name} brand. Find top-quality items and great deals on Fresh-Card.`}
+        />
+      </Helmet>
       {products === null ? (
         <Loading />
       ) : (

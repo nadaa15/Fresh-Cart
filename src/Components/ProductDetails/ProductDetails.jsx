@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import RelatedCatgSlider from '../RelatedCatgSlider/RelatedCatgSlider';
 import { CartContext } from '../../../Context/CartContext';
 import Loading from '../Loading/Loading';
+import { Helmet } from 'react-helmet';
 
 
 export default function ProductDetails() {
@@ -45,6 +46,10 @@ export default function ProductDetails() {
         <Loading />
       ) : (
         <>
+          <Helmet>
+            <title>{`${productDetails.title} - Fresh-Cart`}</title>
+            <meta name="description" content={productDetails.description} />
+          </Helmet>
           <div className="flex justify-center items-center mb-10 container">
             <div className="md:flex justify-center items-center gap-5 w-[75%]">
               <div className="card-img mb-4 w-full md:w-1/3 md:mb-0">

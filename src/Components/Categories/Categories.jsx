@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../../Context/CartContext";
 import toast from "react-hot-toast";
 import Loading from "../Loading/Loading";
+import { Helmet } from "react-helmet";
 
 export default function Categories() {
   const [categories, setCategories] = useState([]);
@@ -25,6 +26,17 @@ export default function Categories() {
 
   return (
     <>
+      <Helmet>
+        <title>Our categories - Fresh-Cart</title>
+        <meta
+          name="description"
+          content="Explore our wide range of categories available for purchase."
+        />
+        <meta
+          name="keywords"
+          content="products, ecommerce, shop, buy, online shopping"
+        />
+      </Helmet>
       {categories.length !== 0 ? (
         <>
           <div className="bg-gray-200 text-center text-xl font-bold w-full mt-20 overflow-hidden bg-opacity-50 h-52 relative">

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../../../Context/CartContext';
 import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
+import { Helmet } from 'react-helmet';
 
 export default function Cart() {
   
@@ -24,6 +25,13 @@ export default function Cart() {
     
   return (
     <>
+      <Helmet>
+        <title>Shopping Cart - Fresh-Cart</title>
+        <meta
+          name="description"
+          content="Review and manage items in your shopping cart. Proceed to checkout or continue shopping to add more items."
+        />
+      </Helmet>
       {cartItems === null ? (
         <Loading />
       ) : (

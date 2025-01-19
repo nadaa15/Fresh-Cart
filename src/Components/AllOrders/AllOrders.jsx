@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
-import style from './AllOrders.module.css'
 import { jwtDecode } from 'jwt-decode';
 import axios from 'axios';
 import Loading from '../Loading/Loading';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default function AllOrders() {
   const [orders, setOrders] = useState(null)
@@ -30,6 +30,13 @@ export default function AllOrders() {
     
   return (
     <>
+      <Helmet>
+        <title>Your Orders - Fresh-Cart</title>
+        <meta
+          name="description"
+          content="Check all your orders from our shop"
+        />
+      </Helmet>
       {orders === null ? (
         <Loading />
       ) : (

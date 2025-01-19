@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { WishListContext } from '../../../Context/WishlistContext';
 import { CartContext } from '../../../Context/CartContext';
 import Loading from '../Loading/Loading';
+import { Helmet } from 'react-helmet';
 
 export default function WishList() {
   let { getWishlist, removeWishlistItem, wishListItems, setWishListItems } =
@@ -20,7 +21,13 @@ export default function WishList() {
         <Loading />
       ) : (
         <>
-          {" "}
+          <Helmet>
+            <title>Your Wishlist - Fresh-Cart</title>
+            <meta
+              name="description"
+              content="Save your favorite products in your wishlist for later. Easily add them to your cart or share with friends."
+            />
+          </Helmet>{" "}
           <div className="bg-gray-200 text-center text-xl font-bold w-full mt-20 overflow-hidden bg-opacity-50 h-52 relative">
             <ul className="container flex justify-between absolute">
               <li className="w-16 h-16 bg-main bg-opacity-20 animate-[floating_10s_1s_ease_infinite] rounded -translate-y-[180px]"></li>
